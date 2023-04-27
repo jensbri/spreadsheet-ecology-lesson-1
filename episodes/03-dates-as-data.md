@@ -150,18 +150,6 @@ part) of the cell that is being operated upon, (unless you did some sort of
 formatting to the cell before, and then all bets are off). Month and year
 rollovers are internally tracked and applied.
 
-**Note**
-Adding years and months and days is slightly trickier because we need to make
-sure that we are adding the amount to the correct entity.
-
-- First we extract the single entities (day, month or year)
-- We can then add values to do that
-- Finally the complete date string is reconstructed using the `DATE()` function.
-
-As for dates, times are handled in a similar way; seconds can be directly
-added but to add hour and minutes we need to make sure that we are adding
-the quantities to the correct entities.
-
 Which brings us to the many different ways Excel provides in how it displays dates. If you refer to the figure above, you'll see that
 there are many ways that ambiguity creeps into your data depending on the format you chose when you enter your data, and if you're not
 fully aware of which format you're using, you can end up actually entering your data in a way that Excel will badly misinterpret and
